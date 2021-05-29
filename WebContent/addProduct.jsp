@@ -84,33 +84,27 @@ tr:nth-child(even) {
   </div>
    <fieldset>
   <legend>Please fill all the field</legend>
-<form action="/action_page.php">
-  <label for="pic">Upload picture:</label><br>
-  <input type="file" id="myFile" name="filename"><br>
+<form  action="addProductAction.jsp" method="post" >
+<label for="pic">Upload picture:</label><br>
+  <input type="file" id="myFile" name="image" size="1000000"><br>
+  <label for="sname">Product id:</label><br>
+  <input type="text" id="fname" name="pid"><br>
   <label for="sname">Product name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
+  <input type="text" id="fname" name="pname"><br>
   <label for="sdesc">Product Description:</label><br>
-  <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea><br>
+  <textarea id="w3review" name="description" rows="4" cols="50"></textarea><br>
   <label for="squantity">Product Quantity:</label><br>
-  <input type="text" id="lname" name="lname"><br>
+  <input type="text" id="lname" name="pquantity"><br>
   <label for="squantity">Product Price:</label><br>
-  <input type="text" id="lname" name="lname"><br>
+  <input type="text" id="lname" name="price"><br>
   <label for="scategory">Product Category:</label><br>
-  <select id="category" name="cars" onChange="productCheck(this)">
-	<option value="default">-</option>
+  <select id="category" name="category" onChange="productCheck(this)">
+    <option value="default">-</option>
     <option value="wet">Wet</option>
     <option value="dry">Dry</option>
-	</select><br>
-	<label id="sflavour" style="display: none">Flavour:<br>
-	<input type="text" id="flavour" name="flavour"></label>
-	<label id="svolume" style="display: none">Volume:<br>
-	<input type="text" id="volume" name="volume"></label>
-	<label id="sweight" style="display: none">Weight:<br>
-	<input type="text" id="weight" name="weight"></label>
-	<label id="stype" style="display: none">Type:<br>
-	<input type="text" id="type" name="type"></label><br>
-  <input type="submit" value="Add Product">
-</form> 
+    </select>
+    <input type="submit" value="submit">
+</form>
 </fieldset>
  <!-- Photo grid (modal) 
 	<div class="w3-row-padding">
